@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://zhouyasong.cn/blog">
-  <title>Hello World | 区块链学习记录</title>
+  <title>区块链安全和升级 | 区块链学习记录</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="区块链安全和升级最近以太坊Parity钱包发生15万个以太币被盗事件，比特币8月1日也面临着软硬分叉的选择。无论是漏洞还是版本升级引起的分叉，此时的区块链系统都面临着被攻击的危险。包括之前出现的DAO事件,交易所失窃事件，一系列的问题都让区块链参与者备受财务和精神损失。 据统计，即使是最安全的比特币区块链， 运行过程都大概出现了22次BUG，软件系统产生问题不可避免，但如何让故障概率降到最小，同时">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://zhouyasong.cn/blog/2018/02/10/hello-world/index.html">
+<meta property="og:title" content="区块链安全和升级">
+<meta property="og:url" content="http://zhouyasong.cn/blog/2018/02/11/区块链安全和升级/index.html">
 <meta property="og:site_name" content="区块链学习记录">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="区块链安全和升级最近以太坊Parity钱包发生15万个以太币被盗事件，比特币8月1日也面临着软硬分叉的选择。无论是漏洞还是版本升级引起的分叉，此时的区块链系统都面临着被攻击的危险。包括之前出现的DAO事件,交易所失窃事件，一系列的问题都让区块链参与者备受财务和精神损失。 据统计，即使是最安全的比特币区块链， 运行过程都大概出现了22次BUG，软件系统产生问题不可避免，但如何让故障概率降到最小，同时">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-10T14:34:30.933Z">
+<meta property="og:updated_time" content="2018-02-11T11:38:21.458Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="区块链安全和升级">
+<meta name="twitter:description" content="区块链安全和升级最近以太坊Parity钱包发生15万个以太币被盗事件，比特币8月1日也面临着软硬分叉的选择。无论是漏洞还是版本升级引起的分叉，此时的区块链系统都面临着被攻击的危险。包括之前出现的DAO事件,交易所失窃事件，一系列的问题都让区块链参与者备受财务和精神损失。 据统计，即使是最安全的比特币区块链， 运行过程都大概出现了22次BUG，软件系统产生问题不可避免，但如何让故障概率降到最小，同时">
   
     <link rel="alternative" href="/atom.xml" title="区块链学习记录" type="application/atom+xml">
   
@@ -33,8 +33,31 @@
     }
   </style>
   
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', '区块链，blockchain', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
 
   
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?区块链，blockchain";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 </head>
 
@@ -47,7 +70,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/img/myself.jpeg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">Jeffrey Zhou</a></h1>
@@ -72,10 +95,6 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
-            
-    			
     			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
             
@@ -83,13 +102,11 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/zhouyasong" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="weixin" target="_blank" href="/img/tianjiaweixin.jpeg" title="weixin"><i class="icon-weixin"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="mail" target="_blank" href="mailto:zhouarrogant@outlook.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -107,7 +124,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/img/myself.jpeg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">Jeffrey Zhou</h1>
@@ -126,13 +143,11 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/zhouyasong" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="weixin" target="_blank" href="/img/tianjiaweixin.jpeg" title="weixin"><i class="icon-weixin"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="mail" target="_blank" href="mailto:zhouarrogant@outlook.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -158,35 +173,95 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-区块链安全和升级" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      区块链安全和升级
     </h1>
   
 
         
-        <a href="/2018/02/10/hello-world/" class="archive-article-date">
-  	<time datetime="2018-02-10T14:34:30.933Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-10</time>
+        <a href="/2018/02/11/区块链安全和升级/" class="archive-article-date">
+  	<time datetime="2018-02-11T11:05:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="区块链安全和升级"><a href="#区块链安全和升级" class="headerlink" title="区块链安全和升级"></a>区块链安全和升级</h1><p>最近以太坊Parity钱包发生15万个以太币被盗事件，比特币8月1日也面临着软硬分叉的选择。无论是漏洞还是版本升级引起的分叉，此时的区块链系统都面临着被攻击的危险。包括之前出现的DAO事件,交易所失窃事件，一系列的问题都让区块链参与者备受财务和精神损失。</p>
+<p>据统计，即使是最安全的比特币区块链， 运行过程都大概出现了22次BUG，<br>软件系统产生问题不可避免，但如何让故障概率降到最小，同时在故障生产时如何快速隔离问题，这是每个区块链的设计和开发者需要认真考虑。</p>
+<p>本文对历史上出现的重要一些漏洞进行案例分析，归纳出一些方法。比原链类似比特币采用UTXO和POW共识模型，又加入了图灵完备的智能合约系统，研究历史的教训对我们大有裨益， 当然也希望其他链的开发者在设计自己的区块链可以避免出现类似的漏洞，以及可以安全地进行版本升级。 </p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h3 id="比特币的交易数据结构是由很多脚本操作码构成的，攻击者可以设计多种交易结构类型使用这些操作码对节点进行拒绝服务攻击"><a href="#比特币的交易数据结构是由很多脚本操作码构成的，攻击者可以设计多种交易结构类型使用这些操作码对节点进行拒绝服务攻击" class="headerlink" title="比特币的交易数据结构是由很多脚本操作码构成的，攻击者可以设计多种交易结构类型使用这些操作码对节点进行拒绝服务攻击"></a>比特币的交易数据结构是由很多脚本操作码构成的，攻击者可以设计多种交易结构类型使用这些操作码对节点进行拒绝服务攻击</h3><p>比如0.3.5版本之前的比特币系统允许攻击者使用OP_LSHIFT脚本进行拒绝服务攻击。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">switch (opcode)</span><br><span class="line">       ......</span><br><span class="line">   case OP_LSHIFT:</span><br><span class="line">      if (bn2 &lt; bnZero)</span><br><span class="line">        return false;</span><br><span class="line">      bn = bn1 &lt;&lt; bn2.getulong();</span><br><span class="line">      break;</span><br></pre></td></tr></table></figure></p>
+<p>这是0.3.2版本中script.cpp中描述OP_LSHIFT的代码。OP_LSHIFT是一个数值运算的操作码，功能是bn2.getulong()左移bn1位并保留符号位得到bn。攻击者可能采用位运算让输出溢出的方式使CPU崩溃，从而达到拒绝服务攻击的效果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">if (opcode == OP_CAT ||</span><br><span class="line">   opcode == OP_SUBSTR ||</span><br><span class="line">   opcode == OP_LEFT ||</span><br><span class="line">   opcode == OP_RIGHT ||</span><br><span class="line">   opcode == OP_INVERT ||</span><br><span class="line">   opcode == OP_AND ||</span><br><span class="line">   opcode == OP_OR ||</span><br><span class="line">   opcode == OP_XOR ||</span><br><span class="line">   opcode == OP_2MUL ||</span><br><span class="line">   opcode == OP_2DIV ||</span><br><span class="line">   opcode == OP_MUL ||</span><br><span class="line">   opcode == OP_DIV ||</span><br><span class="line">   opcode == OP_MOD ||</span><br><span class="line">   opcode == OP_LSHIFT ||</span><br><span class="line">   opcode == OP_RSHIFT)</span><br><span class="line">return false; // Disabled opcodes.</span><br></pre></td></tr></table></figure></p>
+<p>这是0.3.5以后版本中script.cpp描述OP_LSHIFT的代码。OP_LSHIFT已经直接被禁用。可以看到OP_LSHIFT等脚本操作码只是被禁用，并没有直接从代码里删除，如果想要重新启用这些脚本，就需要一次硬分叉。</p>
+<p>另外，在#71036中区块发现了几个OP_CHECKSIG，这种命令会使节点做很多不必要的操作。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mTemplates.insert(make_pair(TX_PUBKEYHASH, CScript() &lt;&lt; OP_DUP &lt;&lt; OP_HASH160 &lt;&lt; OP_PUBKEYHASH &lt;&lt; OP_EQUALVERIFY &lt;&lt; OP_CHECKSIG));</span><br></pre></td></tr></table></figure></p>
+<p>这是0.3.2版本中OP_CHECK是加密脚本，整个交易的输入、输出、脚本（从最近执行OP_CODESEPARATOR）都要哈希。所以当一个交易里面有几个OP_CHECKSIG的时候，会使交易进行重复哈希，有可能引起内存消耗过大甚至直接挂起，从而达到拒绝服务攻击的效果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">bool CScriptCompressor::IsToPubKey(std::vector&lt;unsigned char&gt; &amp;pubkey) const</span><br><span class="line">&#123;</span><br><span class="line">    if (script.size() == 35 &amp;&amp; script[0] == 33 &amp;&amp; script[34] == OP_CHECKSIG</span><br><span class="line">                            &amp;&amp; (script[1] == 0x02 || script[1] == 0x03)) &#123;</span><br><span class="line">        pubkey.resize(33);</span><br><span class="line">        memcpy(&amp;pubkey[0], &amp;script[1], 33);</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">    if (script.size() == 67 &amp;&amp; script[0] == 65 &amp;&amp; script[66] == OP_CHECKSIG</span><br><span class="line">                            &amp;&amp; script[1] == 0x04) &#123;</span><br><span class="line">        pubkey.resize(65);</span><br><span class="line">        memcpy(&amp;pubkey[0], &amp;script[1], 65);</span><br><span class="line">        CKey key;</span><br><span class="line">        return (key.SetPubKey(CPubKey(pubkey))); // SetPubKey fails if this is not a valid public key, a case that would not be compressible</span><br><span class="line">    &#125;</span><br><span class="line">    return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>0.8版本对OP_CHECKSIG进行了限制，在这部分代码中首先匹配各脚本命令所占字节和所在位置，如果不正确，就不会继续执行压缩交易。</p>
+<hr>
+<h3 id="参数的限制不明确与使用不规范也能引发漏洞"><a href="#参数的限制不明确与使用不规范也能引发漏洞" class="headerlink" title="参数的限制不明确与使用不规范也能引发漏洞"></a>参数的限制不明确与使用不规范也能引发漏洞</h3><p>在#74638区块中，攻击者在交易中产生了超过184亿比特币，并发送到网络上的两个地址。几个小时之内，在修复错误后，交易记录被从事务日志中删除，并将网络分配到比特币协议的更新版本。这是在比特币历史上发现和利用的唯一重大安全漏洞。<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&quot;out&quot; : [</span><br><span class="line">               &#123;</span><br><span class="line">                   &quot;value&quot; : 92233720368.54277039,</span><br><span class="line">                                       &quot;scriptPubKey&quot; : &quot;OP_DUP OP_HASH160 0xB7A73EB128D7EA3D388DB12418302A1CBAD5E890 OP_EQUALVERIFY OP_CHECKSIG&quot;</span><br><span class="line">               &#125;,</span><br><span class="line">               &#123;</span><br><span class="line">                   &quot;value&quot; : 92233720368.54277039,</span><br><span class="line">                   &quot;scriptPubKey&quot; : &quot;OP_DUP OP_HASH160 0x151275508C66F89DEC2C5F43B6F9CBE0B5C4722C OP_EQUALVERIFY OP_CHECKSIG&quot;</span><br><span class="line">               &#125;</span><br><span class="line">           ]</span><br></pre></td></tr></table></figure></p>
+<p>上述输出产生两个90多亿的比特币原理如下：<br>比特币只检查UTXO的输入是否大于等于输出，如果大于等于交易就成立。<br>in： 0.50 BTC<br>out：92233720368.54277039，92233720368.54277039<br>fee：0.51<br>92233720368.54277039+92233720368.54277039= -0.01<br>两个90多亿的19位双精度浮点数相加等于-0.01。所以这笔交易通过了。</p>
+<p>此外，0.7.2版本以前,攻击者可以发送一系列的消息包含一个整数整除0在Bloom Filter处理代码，这是对参数使用不规范导致可以远程导致Bitcoin-qt和bitcoind崩溃。</p>
+<hr>
+<h3 id="私钥是比特币最重要的组成部分之一"><a href="#私钥是比特币最重要的组成部分之一" class="headerlink" title="私钥是比特币最重要的组成部分之一"></a>私钥是比特币最重要的组成部分之一</h3><p>在0.4.1-0.5.0版本中比特币私钥并没有被加密，dat文件被加密。比特币私钥有可能被盗走。问题在于管理比特币私钥的是BSDDB数据库引擎。当你使用数据库删除某一数据的时候，他只是标记这个数据被删除了，而不是把数据域。新生成的bat文件也只是追加到数据的后面，而不是覆盖。</p>
+<hr>
+<h3 id="攻击者还可以通过网络对比特币节点进行网络攻击"><a href="#攻击者还可以通过网络对比特币节点进行网络攻击" class="headerlink" title="攻击者还可以通过网络对比特币节点进行网络攻击"></a>攻击者还可以通过网络对比特币节点进行网络攻击</h3><p>0.7.0版本，比特币协议有一个预警系统，用来传播关于数字货币的重要新闻。对于收到的每个警报，节点都会检查警报签名。每一项检查都需要一段时间，通常在1到4秒之间。验证时间并不取决于签名的正确性。因此，攻击者可能会在不付出代价的时候向节点注入无效的警报，并耗尽受害者的节点CPU。</p>
+<p>如果一个恶意节点发送以每秒3000次警报每秒64Kb的频率向受害节点发送警报，会使受害节点的CPU消耗100%去关联 ThreadMessageHandler2()线程。</p>
+<p>即使是发送正确警报的节点，在64字节/秒的连接上连续发送一个188字节的正确警告仍然会使受害者的CPU使用率上升到100%。</p>
+<p>解决办法：</p>
+<ul>
+<li>断开任何发送坏警报节点的网络连接</li>
+<li>检查一个警告是否有超过一次的验证，超过一次的警告就直接拒绝<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">void ThreadMessageHandler2(void* parg)</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;ThreadMessageHandler started\n&quot;);</span><br><span class="line">#ifdef __WXMSW__</span><br><span class="line">    SetThreadPriority(GetCurrentThread(), THREAD_PRIORITY_BELOW_NORMAL);</span><br><span class="line">#else</span><br><span class="line">	setpriority(PRIO_PROCESS, getpid(), PRIO_MIN);</span><br><span class="line">#endif</span><br><span class="line">    loop</span><br><span class="line">    &#123;</span><br><span class="line">        // Poll the connected nodes for messages</span><br><span class="line">        vector&lt;CNode*&gt; vNodesCopy;</span><br><span class="line">        CRITICAL_BLOCK(cs_vNodes)</span><br><span class="line">            vNodesCopy = vNodes;</span><br><span class="line">        foreach(CNode* pnode, vNodesCopy)</span><br><span class="line">        &#123;</span><br><span class="line">            pnode-&gt;AddRef();</span><br><span class="line">            // Receive messages</span><br><span class="line">            TRY_CRITICAL_BLOCK(pnode-&gt;cs_vRecv)</span><br><span class="line">                ProcessMessages(pnode);</span><br><span class="line">            // Send messages</span><br><span class="line">            TRY_CRITICAL_BLOCK(pnode-&gt;cs_vSend)</span><br><span class="line">                SendMessages(pnode);</span><br><span class="line">            pnode-&gt;Release();</span><br><span class="line">        &#125;</span><br><span class="line">        // Wait and allow messages to bunch up</span><br><span class="line">        vnThreadsRunning[2]--;</span><br><span class="line">        Sleep(100);</span><br><span class="line">        vnThreadsRunning[2]++;</span><br><span class="line">        if (CheckForShutdown(2)) return;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>可以看到检查时间并不取决于警报的正确性，只要调用ThreadMessageHandler2线程就会sleep(100)。</p>
+<hr>
+<h3 id="合约型区块链更复杂，漏洞出现的几率也更大"><a href="#合约型区块链更复杂，漏洞出现的几率也更大" class="headerlink" title="合约型区块链更复杂，漏洞出现的几率也更大"></a>合约型区块链更复杂，漏洞出现的几率也更大</h3><p>以以太坊为例，以太坊区块链账户模型是account模型，因为具有图灵完备的智能合约系统，实现起来比比特币更复杂，使得在以太坊上出现的很多智能合约都存在漏洞。The DAO 和前几天出现的Parity钱包漏洞就是很好的例子。下面主要分析一下Parity钱包漏洞。</p>
+<p>Parity Multisig电子钱包版本1.5+的漏洞被发现，使得攻击者从三个高安全的多重签名合约中窃取到超过15万ETH（约3000万美元）。攻击原理如下：</p>
+<p> 成为合约的owner<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function() payable&#123;</span><br><span class="line">    if(msg.value &gt; 0)</span><br><span class="line">        Deposit(msg.sender,msg.value);</span><br><span class="line">    else if(msg.data.length &gt; 0)</span><br><span class="line">        _walletLibrary.delegatecall(msg.data);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>通过往这个合约地址转账一个value = 0 ,msg.data.length &gt; 0 的交易， 执行到_walletLibrary.delegatecall的分支，该函数能无条件的调用合约内的任何一个函数，黑客调用了一个叫做 initWallet的函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function initWallet(address [] _owners,uint _required,uint _daylimit)&#123;</span><br><span class="line">    initDayLimit(_daylimit);</span><br><span class="line">    initMultiowned(_owners,_required);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这个函数再次调用initMultiowned函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function initMultiowned(address [] _owners,uint _required)&#123;</span><br><span class="line">    m_numOwners = _owners.length + 1;</span><br><span class="line">    m_owners[1] = uint(msg.sender)</span><br><span class="line">    m_ownerIndex[uint(msg.sender)] = 1;</span><br><span class="line">    for(uint i=0;i&lt;_owners.length;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        m_owners[2+i]=uint(_owners[i]);</span><br><span class="line">        m_ownerIndex[uint(_owners[i])] = 2+i;</span><br><span class="line">    &#125;</span><br><span class="line">    m_required = _required;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>但是，initWallet没有检查以防止攻击者在合同初始化后调用到initMultiowned, 这个函数使得这个合约的所有者被改为攻击者。</p>
+<p>在parity钱包源代码里修改漏洞的时候仅仅改了一个词，把权限问题划分清楚。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-  function initDaylimit(uint _limit) internal </span><br><span class="line">+  function initDaylimit(uint _limit) only_uninitialized</span><br></pre></td></tr></table></figure></p>
+<p>由此我们可以看到使用图灵完备的智能合约系统时一定要注意合约之间、合约的函数之间相互调用时产生的权限和逻辑问题。</p>
+<hr>
+<h3 id="除了软件代码本身的问题和由攻击者主动发起的攻击之外，区块链系统在版本升级时也会遇到很多问题"><a href="#除了软件代码本身的问题和由攻击者主动发起的攻击之外，区块链系统在版本升级时也会遇到很多问题" class="headerlink" title="除了软件代码本身的问题和由攻击者主动发起的攻击之外，区块链系统在版本升级时也会遇到很多问题"></a>除了软件代码本身的问题和由攻击者主动发起的攻击之外，区块链系统在版本升级时也会遇到很多问题</h3><p>0.3.13版本，比特币进行了版本升级，每笔交易都要有0.01的比特币的交易费，导致了很多微小交易没人打包变成了无效的交易，这些无效的交易放在钱包里可能被继续交易而一直没有被确认。比特币开发者又更改了版本，小额交易（t&lt;0.01）不需要支付交易费。</p>
+<p>此外，版本升级还会引起重复验证交易，可能会存在一种处理重复交易的攻击方式。 存在重复验证交易可能会有两种形式，一是故意添加进来的重复交易。二是版本升级时旧区块与新区块产生重复交易。比如一条交易信息广播出来，新旧两个版本的客户端分别使用新旧两个版本号打包交易，当验证交易的时候，同一个交易的UTXO就会被查找两次，很有可能造成双重支付攻击。BIP30已经解决，在同一条链中，不允许已经验证的交易的标识符与以前的、未完全花费的标识符匹配。只有当前交易的前一个交易没有可输出的输出时，重复交易才可被使用。</p>
+<h3 id="总结与相关建议"><a href="#总结与相关建议" class="headerlink" title="总结与相关建议"></a>总结与相关建议</h3><p>从上面的分析我们可以看到，区块链也避免不了没有漏洞、不受攻击。当出现漏洞需要修补漏洞和提升性能的时候，就需要进行软件升级，说到版本升级就必须说一下软分叉和硬分叉的区别 。</p>
+<p>区块链升级伴随着新的版本号的出现，区块数据格式和交易的数据格式都会更换新的版本号，升级软件的矿工可以不接受旧版本号的交易消息，没有升级软件的矿工接收新版本号的交易消息可以称为软分叉，软分叉最终会达成新版本号一致，硬分叉就是一刀切，升级软件的矿工不接受旧的版本号的消息，没有升级软件的矿工不接受新的版本号的交易消息。</p>
+<p>软硬分叉可以用这两个公式来表示：</p>
+<ul>
+<li>软分叉：a = 1; a = 1+2; a = 2;</li>
+<li>硬分叉：a =1 ; a = 2;</li>
+</ul>
+<p>版本升级时需要考虑的问题：</p>
+<ol>
+<li>考虑大部分网络支持规则之前/之后运行的旧/新软件的所有四种组合</li>
+<li>考虑与老客户/矿工的向后兼容</li>
+<li>在主网部署之前先在测试网络上可用</li>
+<li>逐步推出变革，一步一步来</li>
+</ol>
+<p>升级流程建议</p>
+<ol>
+<li>不接受非标准的交易到内存池，如果它有一个未知的版本号</li>
+<li>使用代码对过去1000个区块的版本号进行计数</li>
+<li>如果最近的区块有55%或更多的版本号有未知版本号，则警告用户需要升级</li>
+</ol>
+<p>升级的方案<br>说明如何以最小化风险和中断的方式处理未来升级的可能性</p>
+<ol>
+<li>必须设计操作码以便有任何一个交易不通过时都可视为无操作。当攻击者根据新规则进行有效的新交易攻击时，对旧的矿工/客户端无效，导致块分裂</li>
+<li>使用新操作码的交易将被给予新版本号</li>
+<li>运行新代码的矿工产生具有新版本号的块，因此可以测量对新功能的支持</li>
+<li>较旧的节点不会中继或挖掘新的交易，也不会占用新交易的交易</li>
+</ol>
+<hr>
+<p><a href="https://security-tracker.debian.org/tracker/source-package/bitcoin" target="_blank" rel="noopener">比特币bug总结</a></p>
+<p><a href="http://www.8btc.com/parity-multisig" target="_blank" rel="noopener">Parity多重签名钱包被盗事件之技术分析</a></p>
+<p><a href="https://gist.github.com/gavinandresen/2355445" target="_blank" rel="noopener">Blockchain Rule Update Process</a></p>
 
       
 
@@ -203,6 +278,16 @@
                   <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpeg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixinpay.jpeg">
+                      <span class="reward-type">微信</span>
+                    </div>
                     
                   </div>
                 </span>
@@ -266,7 +351,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://zhouyasong.cn/blog/2018/02/10/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://zhouyasong.cn/blog/2018/02/11/区块链安全和升级/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -318,7 +403,7 @@
     		&copy; 2018 Jeffrey Zhou
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme
       	</div>
     </div>
   </div>
@@ -359,25 +444,17 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
       
     
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -441,43 +518,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">周亚松&lt;br&gt;&lt;br&gt;本科三年级区块链爱好者&lt;br&gt;共同进步</div>
   	  	
     	</section>
     
