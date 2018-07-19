@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, Blockchain" />
+  <meta name="keywords" content="docker," />
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="这是一个记录个人区块链学习的网站，不定期更新各种区块链技术文章，欢迎转载。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="区块链学习记录">
-<meta property="og:url" content="http://zhouyasong.cn/blog/index.html">
+<meta name="description" content="基本概念 镜像 ： 一个特殊的文件系统，提供容器运行时所需的程序，库，资源，配置等文件，还包含运行时所准的的一些配置参数。 容器 ： 容器的实质是进程 仓库 ： &amp;lt;仓库&amp;gt;:&amp;lt;标签&amp;gt;  Docker 命令详解docker命令格式: docker &amp;lt;选项&amp;gt;&amp;lt;命令&amp;gt;&amp;lt;参数&amp;gt; 选项12345-- config string //使用本地confi">
+<meta name="keywords" content="docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker学习笔记">
+<meta property="og:url" content="http://zhouyasong.cn/blog/2018/07/19/docker学习笔记/index.html">
 <meta property="og:site_name" content="区块链学习记录">
-<meta property="og:description" content="这是一个记录个人区块链学习的网站，不定期更新各种区块链技术文章，欢迎转载。">
+<meta property="og:description" content="基本概念 镜像 ： 一个特殊的文件系统，提供容器运行时所需的程序，库，资源，配置等文件，还包含运行时所准的的一些配置参数。 容器 ： 容器的实质是进程 仓库 ： &amp;lt;仓库&amp;gt;:&amp;lt;标签&amp;gt;  Docker 命令详解docker命令格式: docker &amp;lt;选项&amp;gt;&amp;lt;命令&amp;gt;&amp;lt;参数&amp;gt; 选项12345-- config string //使用本地confi">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-19T14:43:19.674Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="区块链学习记录">
-<meta name="twitter:description" content="这是一个记录个人区块链学习的网站，不定期更新各种区块链技术文章，欢迎转载。">
+<meta name="twitter:title" content="docker学习笔记">
+<meta name="twitter:description" content="基本概念 镜像 ： 一个特殊的文件系统，提供容器运行时所需的程序，库，资源，配置等文件，还包含运行时所准的的一些配置参数。 容器 ： 容器的实质是进程 仓库 ： &amp;lt;仓库&amp;gt;:&amp;lt;标签&amp;gt;  Docker 命令详解docker命令格式: docker &amp;lt;选项&amp;gt;&amp;lt;命令&amp;gt;&amp;lt;参数&amp;gt; 选项12345-- config string //使用本地confi">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://zhouyasong.cn/blog/"/>
+  <link rel="canonical" href="http://zhouyasong.cn/blog/2018/07/19/docker学习笔记/"/>
 
 
 
 
 
-  <title>区块链学习记录</title>
+  <title>docker学习笔记 | 区块链学习记录</title>
   
 
 
@@ -153,8 +155,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -281,9 +282,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -313,9 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/19/docker学习笔记/" itemprop="url">docker学习笔记</a></h1>
+          <h1 class="post-title" itemprop="name headline">docker学习笔记</h1>
         
 
         <div class="post-meta">
@@ -341,11 +340,26 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/19/docker学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/07/19/docker学习笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
           
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
           
 
           
@@ -396,9 +410,7 @@
       
 
       
-        
-          
-            <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
+        <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
 <li>镜像 ： 一个特殊的文件系统，提供容器运行时所需的程序，库，资源，配置等文件，还包含运行时所准的的一些配置参数。</li>
 <li>容器 ： 容器的实质是进程</li>
 <li>仓库 ： &lt;仓库&gt;:&lt;标签&gt;</li>
@@ -527,8 +539,6 @@
 <p>docker wait &lt;容器名称，id&gt;</p>
 </blockquote>
 
-          
-        
       
     </div>
     
@@ -536,179 +546,80 @@
     
 
     
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/uploads/zhouyasong.jpeg" alt="Jeffrey Zhou wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎添加我的微信交流。</div>
+</div>
 
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/uploads/weixinpay.jpeg" alt="Jeffrey Zhou 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/uploads/alipay.jpeg" alt="Jeffrey Zhou 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhouyasong.cn/blog/2018/02/11/区块链安全和升级/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jeffrey Zhou">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/uploads/myself.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="区块链学习记录">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/11/区块链安全和升级/" itemprop="url">区块链安全和升级</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-11T19:05:19+08:00">
-                2018-02-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/docker/" rel="tag"># docker</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  3,259
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  13
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p>最近以太坊Parity钱包发生15万个以太币被盗事件，比特币8月1日也面临着软硬分叉的选择。无论是漏洞还是版本升级引起的分叉，此时的区块链系统都面临着被攻击的危险。包括之前出现的DAO事件,交易所失窃事件，一系列的问题都让区块链参与者备受财务和精神损失。</p>
-<p>据统计，即使是最安全的比特币区块链， 运行过程都大概出现了22次BUG，<br>软件系统产生问题不可避免，但如何让故障概率降到最小，同时在故障生产时如何快速隔离问题，这是每个区块链的设计和开发者需要认真考虑。</p>
-<p>本文对历史上出现的重要一些漏洞进行案例分析，归纳出一些方法。比原链类似比特币采用UTXO和POW共识模型，又加入了图灵完备的智能合约系统，研究历史的教训对我们大有裨益， 当然也希望其他链的开发者在设计自己的区块链可以避免出现类似的漏洞，以及可以安全地进行版本升级。 </p>
-<h2 id=""><a href="#" class="headerlink" title=""></a>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/11/区块链安全和升级/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/11/区块链安全和升级/" rel="next" title="区块链安全和升级">
+                <i class="fa fa-chevron-left"></i> 区块链安全和升级
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -718,10 +629,37 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -729,6 +667,17 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
 
         </div>
         
@@ -749,8 +698,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -821,6 +779,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker-命令详解"><span class="nav-number">1.1.</span> <span class="nav-text">Docker 命令详解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#选项"><span class="nav-number">1.1.1.</span> <span class="nav-text">选项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#attach命令"><span class="nav-number">1.1.2.</span> <span class="nav-text">attach命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#build-命令"><span class="nav-number">1.1.3.</span> <span class="nav-text">build 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#commit-命令"><span class="nav-number">1.1.4.</span> <span class="nav-text">commit 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#create-命令"><span class="nav-number">1.1.5.</span> <span class="nav-text">create 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#diff命令"><span class="nav-number">1.1.6.</span> <span class="nav-text">diff命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#events-命令"><span class="nav-number">1.1.7.</span> <span class="nav-text">events 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#exec-命令"><span class="nav-number">1.1.8.</span> <span class="nav-text">exec 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#export-命令"><span class="nav-number">1.1.9.</span> <span class="nav-text">export 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#history-命令"><span class="nav-number">1.1.10.</span> <span class="nav-text">history 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#images-命令"><span class="nav-number">1.1.11.</span> <span class="nav-text">images 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#import-命令"><span class="nav-number">1.1.12.</span> <span class="nav-text">import 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#info-命令"><span class="nav-number">1.1.13.</span> <span class="nav-text">info 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#inspect-命令"><span class="nav-number">1.1.14.</span> <span class="nav-text">inspect 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#kill-命令"><span class="nav-number">1.1.15.</span> <span class="nav-text">kill 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#load-命令"><span class="nav-number">1.1.16.</span> <span class="nav-text">load 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#login-命令"><span class="nav-number">1.1.17.</span> <span class="nav-text">login 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#logout-命令"><span class="nav-number">1.1.18.</span> <span class="nav-text">logout 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#logs-命令"><span class="nav-number">1.1.19.</span> <span class="nav-text">logs 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#port-命令"><span class="nav-number">1.1.20.</span> <span class="nav-text">port 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pause-命令"><span class="nav-number">1.1.21.</span> <span class="nav-text">pause 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ps-命令"><span class="nav-number">1.1.22.</span> <span class="nav-text">ps 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#push-命令"><span class="nav-number">1.1.23.</span> <span class="nav-text">push 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#restart-命令"><span class="nav-number">1.1.24.</span> <span class="nav-text">restart 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rm-命令"><span class="nav-number">1.1.25.</span> <span class="nav-text">rm 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#run-命令"><span class="nav-number">1.1.26.</span> <span class="nav-text">run 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#save-命令"><span class="nav-number">1.1.27.</span> <span class="nav-text">save 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#search-命令"><span class="nav-number">1.1.28.</span> <span class="nav-text">search 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#start-命令"><span class="nav-number">1.1.29.</span> <span class="nav-text">start 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tag-命令"><span class="nav-number">1.1.30.</span> <span class="nav-text">tag 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#top-命令"><span class="nav-number">1.1.31.</span> <span class="nav-text">top 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#unpause-命令"><span class="nav-number">1.1.32.</span> <span class="nav-text">unpause 命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#wait-命令"><span class="nav-number">1.1.33.</span> <span class="nav-text">wait 命令</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -984,6 +958,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
