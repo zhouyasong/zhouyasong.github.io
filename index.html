@@ -359,7 +359,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,803
+                  1,802
                 </span>
               
 
@@ -397,138 +397,20 @@
 
       
         
-          
-            <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
+          <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
 <li>镜像 ： 一个特殊的文件系统，提供容器运行时所需的程序，库，资源，配置等文件，还包含运行时所准的的一些配置参数。</li>
 <li>容器 ： 容器的实质是进程</li>
 <li>仓库 ： &lt;仓库&gt;:&lt;标签&gt;</li>
 </ul>
 <h3 id="Docker-命令详解"><a href="#Docker-命令详解" class="headerlink" title="Docker 命令详解"></a>Docker 命令详解</h3><p>docker命令格式: docker &lt;选项&gt;&lt;命令&gt;&lt;参数&gt;</p>
 <h4 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- config string //使用本地config文件 </span><br><span class="line">- D 启动debug模式</span><br><span class="line">- d 以守护模式运行</span><br><span class="line">- p 设置pid文件路径</span><br><span class="line">- v 打印版本信息</span><br></pre></td></tr></table></figure>
-<p>&lt;–! more –&gt;</p>
-<h4 id="attach命令"><a href="#attach命令" class="headerlink" title="attach命令"></a>attach命令</h4><blockquote>
-<p>attach命令用于将标准输入（stdin）与标准输出（stdout）连接到正在运行的容器</p>
-<p>docker attach &lt;选项&gt;&lt;容器名称, id&gt;</p>
-</blockquote>
-<h4 id="build-命令"><a href="#build-命令" class="headerlink" title="build 命令"></a>build 命令</h4><blockquote>
-<p>build命令使用Dockerfile文件创建镜像</p>
-<p>docker build &lt;选项&gt;<dockerfile路径></dockerfile路径></p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">--force-rm=false 创建镜像失败时，删除临时容器</span><br><span class="line"></span><br><span class="line">--no-cache=false 不使用之前构建中创建的缓存。</span><br><span class="line"></span><br><span class="line">-q、--quiet=false 不显示Dockerfile的RUN运行的输出结果</span><br><span class="line"></span><br><span class="line">--rm=true 创建镜像成功时，删除临时容器</span><br><span class="line"></span><br><span class="line">-t、--tag=&quot;&quot; 设置注册名称、镜像名称、标签。格式为 &lt;注册名称&gt;/&lt;镜像名称&gt;:&lt;标签&gt;（标签默认为latest）</span><br></pre></td></tr></table></figure>
-<h4 id="commit-命令"><a href="#commit-命令" class="headerlink" title="commit 命令"></a>commit 命令</h4><blockquote>
-<p>cp命令用于将容器的目录或文件复制的到主机。若将cp命令中的路径设置为目录，则将该目录下的所有内容复制到主机</p>
-<p>docker cp &lt;容器名称&gt;:&lt;路径&gt;&lt;主机路径&gt;</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp hello:/etc . 将容器内的整个/etc 目录复制到主机当前文件夹下</span><br></pre></td></tr></table></figure>
-<h4 id="create-命令"><a href="#create-命令" class="headerlink" title="create 命令"></a>create 命令</h4><blockquote>
-<p>create 命令使用指定的镜像创建容器。与run命令不同，使用create命令只能创建容器而并不启动</p>
-<p>docker create &lt;选项&gt;&lt;镜像名称,id&gt;&lt;命令&gt;&lt;参数&gt;</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">-a  将标准输入、标准输出、标准错误链接到容器</span><br><span class="line">--attach=&quot;stdin&quot;</span><br><span class="line"></span><br><span class="line">--add-host=[] 向容器的/etc/hosts添加主机名与IP地址</span><br><span class="line">--add-host=hello:192.168.0.233</span><br><span class="line"></span><br><span class="line">-h 设置容器主机名</span><br><span class="line">--name 设置容器名称</span><br><span class="line">-i 激活标准输入</span><br><span class="line">-t 使用TTY模式（pseudo-TTY）</span><br><span class="line">-u 容器运行时需要使用liunx账户与uid</span><br><span class="line"></span><br><span class="line">-v 设置数据卷。设置要与主机共享目录，不将文件保存到容器，而直接保存到主机。在主机目录后添加 :ro、:rw进行读写设置，默认为:rw。</span><br></pre></td></tr></table></figure>
-<h4 id="diff命令"><a href="#diff命令" class="headerlink" title="diff命令"></a>diff命令</h4><blockquote>
-<p>diff命令用于检查容器文件系统的修改</p>
-<p>docker diff &lt;容器名称，id&gt;</p>
-</blockquote>
-<p>比较文件是否修改的标准是容器创建时的镜像内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A：添加的文件</span><br><span class="line">C：修改的文件</span><br><span class="line">D：删除的文件</span><br></pre></td></tr></table></figure>
-<h4 id="events-命令"><a href="#events-命令" class="headerlink" title="events 命令"></a>events 命令</h4><blockquote>
-<p>events命令用于实时输出Docker服务器中发生的事件</p>
-<p>docker events</p>
-</blockquote>
-<p>运行docker events命令，进入待机状态<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker events</span><br></pre></td></tr></table></figure></p>
-<p>在另一终端，运行容器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start hello #假设容器已存在</span><br></pre></td></tr></table></figure></p>
-<h4 id="exec-命令"><a href="#exec-命令" class="headerlink" title="exec 命令"></a>exec 命令</h4><blockquote>
-<p>exec命令用于从外部运行容器内部的命令</p>
-<p>docker exec<br>&lt;选项&gt;&lt;容器名称，id&gt;&lt;命令&gt;&lt;参数&gt;</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-d、--detach=false 以后台模式运行命令</span><br><span class="line">-i、--interactive=false 开启标准输入，即使未与容器连接，也维持标准输入</span><br><span class="line">-t、--tty=false 使用TTY模式（pseudo-TTY）若要使用bash，则必须设置该选项。若不设置该选项，则虽然输入命令，但不显示shell</span><br><span class="line">运行如下命令，创建</span><br></pre></td></tr></table></figure>
-<h4 id="export-命令"><a href="#export-命令" class="headerlink" title="export 命令"></a>export 命令</h4><blockquote>
-<p>export命令将用于将容器的文件系统导出为tar文件包</p>
-<p>docker export &lt;容器名称，id&gt;</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -it -d --name hello ubuntu /bin/bash</span><br><span class="line">$ docker export hello &gt; hello.tar</span><br></pre></td></tr></table></figure>
-<h4 id="history-命令"><a href="#history-命令" class="headerlink" title="history 命令"></a>history 命令</h4><blockquote>
-<p>history 命令用于显示镜像的历史。此处的历史依据Dockerfile文件中的设置创建。</p>
-<p>docker history &lt;选项&gt;&lt;镜像名称，id&gt;</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">--no-trunc=false 输出所有因内容过长而省略的部分</span><br><span class="line">-q、--quiet=false 只显示镜像id</span><br></pre></td></tr></table></figure>
-<h4 id="images-命令"><a href="#images-命令" class="headerlink" title="images 命令"></a>images 命令</h4><blockquote>
-<p>images命令用于输出镜像列表<br>docker images &lt;选项&gt;&lt;镜像名称，id&gt;</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-a、--all=false 列出所有镜像，包括父镜像</span><br><span class="line">-f、--filter=[] 设置输出结果过滤。若设置为&quot;dangling=true&quot;，则只输出无名镜像</span><br><span class="line">--no-trunc=false 显示所有因内容过长而省略的部分</span><br></pre></td></tr></table></figure>
-<h4 id="import-命令"><a href="#import-命令" class="headerlink" title="import 命令"></a>import 命令</h4><blockquote>
-<p>import命令用于从压缩为tar文件（.tar .tar.gz .tgz .bzip .tar.xz .txz）的文件系统创建镜像</p>
-<p>docker import <tar文件的url或者 -="">&lt;注册名称&gt;/&lt;镜像名称&gt;:&lt;标签&gt;</tar文件的url或者></p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker import http://example.com/hello.tar.zg hello</span><br></pre></td></tr></table></figure>
-<h4 id="info-命令"><a href="#info-命令" class="headerlink" title="info 命令"></a>info 命令</h4><blockquote>
-<p>info命令用于显示当前系统信息、docker容器、镜像个数、设置等信息。</p>
-<p>docker info</p>
-</blockquote>
-<h4 id="inspect-命令"><a href="#inspect-命令" class="headerlink" title="inspect 命令"></a>inspect 命令</h4><blockquote>
-<p>inspect 命令用于以JSON格式显示容器与镜像的详细信息</p>
-<p>docker inspect &lt;选项&gt;&lt;容器或镜像名称，id&gt;</p>
-<h4 id="kill-命令"><a href="#kill-命令" class="headerlink" title="kill 命令"></a>kill 命令</h4><p>kill命令用于向容器发送KILL信号，从而关闭容器（推荐使用更优雅温和的 docker stop 命令)</p>
-<p>docker &lt;选项&gt;&lt;容器名称，id&gt;</p>
-<h4 id="load-命令"><a href="#load-命令" class="headerlink" title="load 命令"></a>load 命令</h4><p>load命令用于从tar文件创建镜像</p>
-<p>docker load &lt;选项&gt;</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker save myimages &gt; myimages.tar  #将已存在的镜像保存为tar文件</span><br><span class="line">$ docker load &lt; myimages.tar  #在另一台电脑从tar文件创建镜像</span><br></pre></td></tr></table></figure>
-<h4 id="login-命令"><a href="#login-命令" class="headerlink" title="login 命令"></a>login 命令</h4><blockquote>
-<p>login命令用于登录Docker 的注册服务器</p>
-<p>docker login &lt;选项&gt;<docker 注册服务器的url=""></docker></p>
-<h4 id="logout-命令"><a href="#logout-命令" class="headerlink" title="logout 命令"></a>logout 命令</h4><p>logout命令用于从Docker注册服务器中登出</p>
-<p>docker logout &lt;选项&gt;<docker 注册服务器的url=""></docker></p>
-</blockquote>
-<h4 id="logs-命令"><a href="#logs-命令" class="headerlink" title="logs 命令"></a>logs 命令</h4><blockquote>
-<p>logs命令用于输出容器日志</p>
-<p>docker logs &lt;容器名称，id&gt;</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-f、--follow=false 一直输出实时日志</span><br><span class="line">-t、--timestamp=false 在登录时显示时间值</span><br><span class="line">--tail=&quot;all&quot; 指定数字，只从日志中输出一定个数</span><br></pre></td></tr></table></figure>
-<h4 id="port-命令"><a href="#port-命令" class="headerlink" title="port 命令"></a>port 命令</h4><blockquote>
-<p>port命令用于查看容器的某个端口是否处于开放状态</p>
-<p>docker port &lt;容器名称，id&gt;&lt;端口&gt;</p>
-<h4 id="pause-命令"><a href="#pause-命令" class="headerlink" title="pause 命令"></a>pause 命令</h4><p>pause命令用于暂停容器中正在运行的所有进程</p>
-<p>docker pause &lt;容器名称，id&gt;</p>
-</blockquote>
-<h4 id="ps-命令"><a href="#ps-命令" class="headerlink" title="ps 命令"></a>ps 命令</h4><blockquote>
-<p>ps命令用于输出容器列表</p>
-<p>docker ps &lt;选项&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-a、--all=false 列出所有容器。不带 -a 只输出在运行的容器</span><br><span class="line">--before=&quot;&quot; 列出特定容器创建前的容器，包含停止的容器。</span><br><span class="line">-f、--filter=[] 设置输出过滤。如 &quot;exited=0&quot;</span><br><span class="line">-l、--latest=false 列出最后创建的容器，包含停止的容器</span><br><span class="line">-q、--quiet=false 只输出容器的id</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="push-命令"><a href="#push-命令" class="headerlink" title="push 命令"></a>push 命令</h4><blockquote>
-<p>push命令用于将镜像推送到Docker注册服务器</p>
-<p>docker push &lt;注册名&gt;/&lt;镜像名&gt;:&lt;标签&gt;</p>
-</blockquote>
-<h4 id="restart-命令"><a href="#restart-命令" class="headerlink" title="restart 命令"></a>restart 命令</h4><blockquote>
-<p>restart命令用户重启容器</p>
-<p>docker restart &lt;选项&gt;&lt;容器名称，id&gt;</p>
-</blockquote>
-<h4 id="rm-命令"><a href="#rm-命令" class="headerlink" title="rm 命令"></a>rm 命令</h4><blockquote>
-<p>rm 命令用于删除容器</p>
-<p>docker rm &lt;选项&gt;&lt;容器名称，id&gt;</p>
-</blockquote>
-<h4 id="run-命令"><a href="#run-命令" class="headerlink" title="run 命令"></a>run 命令</h4><blockquote>
-<p>rm 命令用于删除容器</p>
-<p>docker rm &lt;选项&gt;&lt;容器名称，id&gt;</p>
-<h4 id="save-命令"><a href="#save-命令" class="headerlink" title="save 命令"></a>save 命令</h4><p>save命令用于将镜像保存为tar包文件</p>
-<p>docker save &lt;选项&gt;&lt;镜像名称&gt;:&lt;标签&gt;</p>
-<h4 id="search-命令"><a href="#search-命令" class="headerlink" title="search 命令"></a>search 命令</h4><p>search命令用与在docker hub 中搜索镜像</p>
-<p>docker search &lt;选项&gt;&lt;搜索词&gt;</p>
-<h4 id="start-命令"><a href="#start-命令" class="headerlink" title="start 命令"></a>start 命令</h4><p>start命令用于启动容器</p>
-<p>docker start &lt;选项&gt;&lt;容器名称，id&gt;</p>
-<h4 id="tag-命令"><a href="#tag-命令" class="headerlink" title="tag 命令"></a>tag 命令</h4><p>tag命令用于设置镜标签</p>
-<p>docker tag &lt;选项&gt;&lt;镜像名称&gt;:&lt;标签&gt;&lt;注册地址，用户名&gt;/&lt;镜像名称&gt;:&lt;标签&gt;</p>
-<h4 id="top-命令"><a href="#top-命令" class="headerlink" title="top 命令"></a>top 命令</h4><p>top命令用于显示容器中正在运行的进程信息</p>
-<p>docker top &lt;容器名称，id&gt;<ps选项></ps选项></p>
-<h4 id="unpause-命令"><a href="#unpause-命令" class="headerlink" title="unpause 命令"></a>unpause 命令</h4><p>unpause命令用于重启 pause 命令暂停的容器</p>
-<p>docker unpause &lt;容器名称，id&gt;</p>
-</blockquote>
-<h4 id="wait-命令"><a href="#wait-命令" class="headerlink" title="wait 命令"></a>wait 命令</h4><blockquote>
-<p>wait 命令等待容器终止，然后输出 Exit Code</p>
-<p>docker wait &lt;容器名称，id&gt;</p>
-</blockquote>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/19/docker学习笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
