@@ -296,210 +296,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhouyasong.cn/blog/2018/07/20/yaml学习笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jeffrey Zhou">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/uploads/myself.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="区块链学习记录">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/20/yaml学习笔记/" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-20T11:05:04+08:00">
-                2018-07-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,143
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  5
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="yaml-学习"><a href="#yaml-学习" class="headerlink" title="yaml 学习"></a>yaml 学习</h2><h3 id="基本语法规则"><a href="#基本语法规则" class="headerlink" title="基本语法规则"></a>基本语法规则</h3><p>yaml实质上是一种数据串行化格式：</p>
-<ul>
-<li>大小写敏感</li>
-<li>使用缩进表示层级关系</li>
-<li>缩进时不允许使用Tab键，只允许使用空格。</li>
-<li>缩进的空格数目不重要，只要相同层级的元素左侧对齐即可</li>
-</ul>
-<p>yaml支持三种数据结构：</p>
-<ul>
-<li>对象：键值对的集合，又称为映射（mapping）/ 哈希（hashes） / 字典（dictionary）</li>
-<li>数组：一组按次序排列的值，又称为序列（sequence） / 列表（list）</li>
-<li>纯量（scalars）：单个的、不可再分的值</li>
-</ul>
-<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>对象的一组键值对，使用冒号结构表示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">animal : pets</span><br></pre></td></tr></table></figure></p>
-<p>转换为javascript如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;animal : &apos;pets&apos;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>yaml也支持另外一种写法，将所有键值对写成一个行内对象：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hash: &#123; name: Steve, foo: bar &#125;</span><br></pre></td></tr></table></figure></p>
-<p>转换为js如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;hash: &#123;name: &apos;Steve&apos;, foo: &apos;bar&apos;&#125;&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p>一组连词线开头的行，构成一个数组：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- Cat</span><br><span class="line">- Dog</span><br><span class="line">- Goldfish</span><br></pre></td></tr></table></figure></p>
-<p>转换为js如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&apos;Cat&apos;, &apos;Dog&apos;, &apos;Goldfish&apos;]</span><br></pre></td></tr></table></figure></p>
-<p>数据结构的子成员是一个数组，则可以在该项下面缩进一个空格：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- </span><br><span class="line">  - Cat</span><br><span class="line">  - Dog</span><br><span class="line">  - Goldfish</span><br></pre></td></tr></table></figure></p>
-<p>转换为js如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[&apos;Cat&apos;, &apos;Dog&apos;, &apos;Goldfish&apos;]]</span><br></pre></td></tr></table></figure></p>
-<p>数组也可以采用行内表示法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">animal: [Cat, Dog]</span><br></pre></td></tr></table></figure></p>
-<p>转换为js如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;animal: [&apos;Cat&apos;, &apos;Dog&apos;]&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="复合结构"><a href="#复合结构" class="headerlink" title="复合结构"></a>复合结构</h4><p>对象和数组可以结合使用，形成复合结构。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">languages:</span><br><span class="line"> - Ruby</span><br><span class="line"> - Perl</span><br><span class="line"> - Python </span><br><span class="line">websites:</span><br><span class="line"> YAML: yaml.org </span><br><span class="line"> Ruby: ruby-lang.org </span><br><span class="line"> Python: python.org </span><br><span class="line"> Perl: use.perl.org</span><br></pre></td></tr></table></figure></p>
-<p>转化为js如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123; languages: [Ruby, Perl, Python],</span><br><span class="line">  wesites: </span><br><span class="line">   &#123;YAML: &apos;yaml.org&apos;,</span><br><span class="line">    Ruby: &apos;ruby-lang.org&apos;,</span><br><span class="line">    Python: &apos;python.org&apos;,</span><br><span class="line">    perl: &apos;use.perl.org&apos;&#125;&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="纯量"><a href="#纯量" class="headerlink" title="纯量"></a>纯量</h4><p>纯量是最基本的，不可再分的值，以下都是js的纯量：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">字符串     </span><br><span class="line">布尔值     isSet: true         -&gt; &#123;isSet: true&#125;</span><br><span class="line">整数</span><br><span class="line">浮点数     number: 12.30       -&gt; &#123;number: 12.30&#125;</span><br><span class="line">Null       parent: ~          -&gt; &#123;parent: null&#125;</span><br><span class="line">时间       iso8601: date       -&gt; &#123;iso8601: new Date(date)&#125;</span><br><span class="line">日期       date: 1996-09-24    -&gt; &#123;date: new Date(&apos;1996-09-24&apos;)&#125;</span><br></pre></td></tr></table></figure></p>
-<p>yaml 允许两个感叹号强制转换数据类型：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">e: !!str 123</span><br><span class="line">f: !!str true</span><br></pre></td></tr></table></figure></p>
-<p>转换为js如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;e: &apos;123&apos;, f: &apos;true&apos;&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><p>字符串默认不使用引号表示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str: 这是一行字符串</span><br></pre></td></tr></table></figure></p>
-<p>转换为js：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;str: &apos;这是一行字符串&apos;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>如果字符串中包含空格或者特殊符号，需要放在引号中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str: &apos;内容：字符串&apos;</span><br></pre></td></tr></table></figure></p>
-<p>转换为js如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;str: &apos;内容：字符串&apos;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>单引号双引号都可以用，但是双引号不会对特殊字符转义：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str1: &apos;a\nb&apos;</span><br><span class="line">str2: &quot;a\nb&quot;</span><br></pre></td></tr></table></figure></p>
-<p>转换为js如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;str1: &apos;a\\nb&apos;, str2: &quot;a\nb&quot;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>单引号中还有单引号，必须使用两个单引号进行转义：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str: &apos;Jeffrey&apos;&apos;s blog&apos;</span><br></pre></td></tr></table></figure></p>
-<p>转化为js如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;str: &apos;Jeffrey\&apos;s blog&#125;</span><br></pre></td></tr></table></figure></p>
-<p>字符串可以写成多行，从第二行开始需要有空格，换行符会被转换为空格：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str: Jeffrey</span><br><span class="line">  bitcoin</span><br><span class="line">  ethereum</span><br></pre></td></tr></table></figure></p>
-<p>转换为js如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;str: Jeffrey bitcoin ethereum&#125;</span><br></pre></td></tr></table></figure></p>
-<p>多行字符串使用 <code>|</code> 保留换行符，使用<code>&gt;</code>折叠换行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">this: |</span><br><span class="line"> bitcoin</span><br><span class="line"> ethereum</span><br><span class="line">that: &gt;</span><br><span class="line"> bitcoin</span><br><span class="line"> ethereum</span><br></pre></td></tr></table></figure></p>
-<p>转换为js如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;this: &apos;bitcoin\nethereu\n&apos;, that: &apos;bitcoin ethereum\n&apos;&#125;</span><br></pre></td></tr></table></figure></p>
-<p><code>+</code> 表示保留文字段末尾的换行， `-`` 表示去除文字段末尾的换行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">str1: |</span><br><span class="line"> bitcoin</span><br><span class="line"></span><br><span class="line">str2: |+</span><br><span class="line"> bitcoin</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">str3: |-</span><br><span class="line"> bitcoin</span><br></pre></td></tr></table></figure></p>
-<p>转化为js如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;str1: &apos;bitcoin\n&apos;, str2: `bitcoin\n\n\n`, str3: `bitcoin`&#125;</span><br></pre></td></tr></table></figure></p>
-<p>字符串中可以插入html标记：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">message: |</span><br><span class="line"></span><br><span class="line">  &lt;p style=&quot;color: red&quot;&gt;</span><br><span class="line">    段落</span><br><span class="line">  &lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
-<p>转换为js如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; message: &apos;\n&lt;p style=&quot;color: red&quot;&gt;\n  段落\n&lt;/p&gt;\n&apos; &#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><p><code>&amp;</code> 用来建立锚点，<code>&lt;&lt;</code> 表示合并到当前数据，<code>*</code> 用来引用锚点。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">defaults: &amp;defaults</span><br><span class="line">  adapter:  postgres</span><br><span class="line">  host:     localhost</span><br><span class="line"></span><br><span class="line">development:</span><br><span class="line">  database: myapp_development</span><br><span class="line">  &lt;&lt;: *defaults</span><br><span class="line"></span><br><span class="line">test:</span><br><span class="line">  database: myapp_test</span><br><span class="line">  &lt;&lt;: *defaults</span><br></pre></td></tr></table></figure></p>
-<p>等同于：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">defaults:</span><br><span class="line">  adapter:  postgres</span><br><span class="line">  host:     localhost</span><br><span class="line"></span><br><span class="line">development:</span><br><span class="line">  database: myapp_development</span><br><span class="line">  adapter:  postgres</span><br><span class="line">  host:     localhost</span><br><span class="line"></span><br><span class="line">test:</span><br><span class="line">  database: myapp_test</span><br><span class="line">  adapter:  postgres</span><br><span class="line">  host:     localhost</span><br></pre></td></tr></table></figure></p>
-<p>举例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- &amp;showell Steve </span><br><span class="line">- Clark </span><br><span class="line">- Brian </span><br><span class="line">- Oren </span><br><span class="line">- *showell</span><br></pre></td></tr></table></figure></p>
-<p>转化为js如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">[ &apos;Steve&apos;, &apos;Clark&apos;, &apos;Brian&apos;, &apos;Oren&apos;, &apos;Steve&apos; ]</span><br></pre></td></tr></table></figure></p>
-<h4 id="函数和正则表达式的转换"><a href="#函数和正则表达式的转换" class="headerlink" title="函数和正则表达式的转换"></a>函数和正则表达式的转换</h4><p>JS-YAML库特有的功能， 可以把函数和正则表达式转换成字符串：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># example.yml</span><br><span class="line">fn: function () &#123; return 1 &#125;</span><br><span class="line">reg: /test/</span><br></pre></td></tr></table></figure></p>
-<p>解析上面的 yml 文件的代码如下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var yaml = require(&apos;js-yaml&apos;);</span><br><span class="line">var fs   = require(&apos;fs&apos;);</span><br><span class="line"></span><br><span class="line">try &#123;</span><br><span class="line">  var doc = yaml.load(</span><br><span class="line">    fs.readFileSync(&apos;./example.yml&apos;, &apos;utf8&apos;)</span><br><span class="line">  );</span><br><span class="line">  console.log(doc);</span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">  console.log(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>从 JavaScript 对象还原到 yaml 文件的代码如下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var yaml = require(&apos;js-yaml&apos;);</span><br><span class="line">var fs   = require(&apos;fs&apos;);</span><br><span class="line"></span><br><span class="line">var obj = &#123;</span><br><span class="line">  fn: function () &#123; return 1 &#125;,</span><br><span class="line">  reg: /test/</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">try &#123;</span><br><span class="line">  fs.writeFileSync(</span><br><span class="line">    &apos;./example.yml&apos;,</span><br><span class="line">    yaml.dump(obj),</span><br><span class="line">    &apos;utf8&apos;</span><br><span class="line">  );</span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">  console.log(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>TODO: 添加转换为go语言版本。</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://zhouyasong.cn/blog/2018/07/19/docker学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -611,6 +407,173 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/19/docker学习笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhouyasong.cn/blog/2018/07/19/yaml学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jeffrey Zhou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/uploads/myself.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="区块链学习记录">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/19/yaml学习笔记/" itemprop="url">docker学习笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-19T22:41:48+08:00">
+                2018-07-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,143
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="yaml-学习"><a href="#yaml-学习" class="headerlink" title="yaml 学习"></a>yaml 学习</h2><h3 id="基本语法规则"><a href="#基本语法规则" class="headerlink" title="基本语法规则"></a>基本语法规则</h3><p>yaml实质上是一种数据串行化格式：</p>
+<ul>
+<li>大小写敏感</li>
+<li>使用缩进表示层级关系</li>
+<li>缩进时不允许使用Tab键，只允许使用空格。</li>
+<li>缩进的空格数目不重要，只要相同层级的元素左侧对齐即可</li>
+</ul>
+<p>yaml支持三种数据结构：</p>
+<ul>
+<li>对象：键值对的集合，又称为映射（mapping）/ 哈希（hashes） / 字典（dictionary）</li>
+<li>数组：一组按次序排列的值，又称为序列（sequence） / 列表（list）</li>
+<li>纯量（scalars）：单个的、不可再分的值</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/19/yaml学习笔记/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
